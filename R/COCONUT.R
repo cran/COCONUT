@@ -393,8 +393,11 @@ combineCOCOoutput <- function (COCONUT.out) {
 
     ## stand.mean cols are identical;
     ## if supplied from 'bayesParams' add enough to match dat
-    stand.mean <-  Reduce(cbind, lapply(1:ncol(dat), function(x) stand.mean[,1]))
-
+    # stand.mean <-  Reduce(cbind, lapply(1:ncol(dat), function(x) stand.mean[,1]))
+    geneNames <- rownames(stand.mean)
+    stand.mean <-  matrix(data=stand.mean[,1], nrow=nrow(stand.mean), ncol=ncol(dat))
+    rownames(stand.mean) <- geneNames 
+    
     ## s.data is Z\sub_ijg
     s.data <- (dat - stand.mean)/(sqrt(var.pooled) %*% t(rep(1, n.array)))
 
