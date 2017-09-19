@@ -223,7 +223,8 @@ combineCOCOoutput <- function (COCONUT.out) {
     cat("Standardizing Data across genes\n")
     B.hat <- solve(t(design) %*% design) %*% t(design) %*% t(as.matrix(dat))
     grand.mean <- t(n.batches/n.array) %*% B.hat[1:n.batch,]
-
+    
+    dat <- as.matrix(dat)
     var.pooled <- ((dat - t(design %*% B.hat))^2) %*% rep(1/n.array,  n.array)
 
     stand.mean <- t(grand.mean) %*% t(rep(1, n.array))

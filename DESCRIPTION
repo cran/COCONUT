@@ -1,8 +1,8 @@
 Package: COCONUT
 Type: Package
 Title: COmbat CO-Normalization Using conTrols (COCONUT)
-Version: 1.0.1
-Date: 2016-06-10
+Version: 1.0.2
+Date: 2017-09-18
 Author: Timothy E Sweeney, MD, PhD [aut,cre]
 Maintainer: Timothy E Sweeney <tes17@alumni.stanford.edu>
 Depends: stats
@@ -12,6 +12,7 @@ Description: Allows for pooled analysis of microarray data by batch-correcting c
 License: GPL-3
 LazyData: TRUE
 NeedsCompilation: no
-Packaged: 2016-06-29 20:35:05 UTC; tes17
+RoxygenNote: 6.0.1
+Packaged: 2017-09-19 02:35:09 UTC; timsweeney
 Repository: CRAN
-Date/Publication: 2016-06-29 23:29:47
+Date/Publication: 2017-09-19 07:55:13 UTC
